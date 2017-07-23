@@ -52,20 +52,3 @@ class redpack{
 }
 
 ?>
-
-
-
-
-<?php
-die;
-	$params = "action=count&sid=2015_bj_starteachers&name=%E7%AC%A6%E6%89%AC%E6%89%AC&guid=ABB0A26769EF4594AE484F60
-2326C876";  
-	$ch = curl_init();  
-	curl_setopt($ch, CURLOPT_URL, "http://vc.koouoo.com/li.php");  
-	curl_setopt($ch, CURLOPT_HTTPHEADER, array('X-FORWARDED-FOR:8.8.8.8', 'CLIENT-IP:8.8.8.8'));  //构造IP  
-	curl_setopt($ch, CURLOPT_REFERER, "http://www.baidu.com/ ");   //构造来路  
-	curl_setopt($ch, CURLOPT_HEADER, 1);  
-	curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
-	$out = curl_exec($ch);  
-	curl_close($ch); 
-?>
